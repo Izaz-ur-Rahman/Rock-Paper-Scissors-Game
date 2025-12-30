@@ -15,18 +15,21 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .choice{
     width: 165px;
     height: 165px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .choice:hover{
 cursor: pointer;
-opacity: 0.5;
-
+background-color: rgb(18, 18, 118);
 }
 
 
@@ -35,4 +38,12 @@ img{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8rem;
+    height: 10rem;
 }
