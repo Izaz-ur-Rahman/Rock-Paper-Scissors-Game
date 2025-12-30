@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    background-color: rgb(13, 13, 104);
+    color:white;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice{
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+}
+
+.choice:hover{
+cursor: pointer;
+opacity: 0.5;
+
+}
+
+
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
