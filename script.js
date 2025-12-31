@@ -5,6 +5,9 @@ let Choices = document.querySelectorAll(".choice");
 
 Choices.forEach((choice)=>{
    // console.log(choice);
-   
+   const UserChoice = choice.getAttribute("id");
+   choice.addEventListener("click",() => {
+    console.log("choice are clicked and its ID is :",UserChoice);
+   })
 })
 
