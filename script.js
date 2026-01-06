@@ -15,4 +15,10 @@ Choices.forEach((choice)=>{
 
 const playGame = (choice) => {
 console.log("User choice is : ", choice);
+const computerChoice = generateComputerChoice();
+}
+
+const generateComputerChoice = () => {
+     const options = ["rock","paper","scissors"];
+     
 }
