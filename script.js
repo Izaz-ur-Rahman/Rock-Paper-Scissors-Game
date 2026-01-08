@@ -15,10 +15,14 @@ Choices.forEach((choice)=>{
 
 const playGame = (choice) => {
 console.log("User choice is : ", choice);
+
 const computerChoice = generateComputerChoice();
 }
 
 const generateComputerChoice = () => {
      const options = ["rock","paper","scissors"];
-     
+
+      let randomIndex = Math.floor(Math.random() * 3);
+      console.log("computer choice is : ", options[randomIndex]);
+      return options[randomIndex];
 }
