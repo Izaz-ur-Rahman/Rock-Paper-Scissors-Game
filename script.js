@@ -32,9 +32,11 @@ const playGame = (UserChoice) => {
       if(computerChoice == "paper")
       {
          Userwin = false;
+         console.log("computer wins")
       }
       else{
          Userwin = true
+         console.log("player wins")
       }
    }
    else{
@@ -45,10 +47,28 @@ const playGame = (UserChoice) => {
         if(computerChoice == "rock" )
         {
          userwin = true;
+         console.log("player wins")
         }
         else{
          userwin = false;
+         console.log("computer winner")
         }
+      }
+      else {
+         if(UserChoice == "scissors")
+         {
+            // scissors vs rock or paper 
+            if(computerChoice == "rock")
+            {
+               userwin = false;
+               console.log("computer winner ")
+            }
+            else {
+               userwin = true;
+               console.log("player wins")
+            }
+         }
+
       }
    }
   }
