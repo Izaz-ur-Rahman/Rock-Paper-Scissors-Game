@@ -17,6 +17,15 @@ const playGame = (choice) => {
 console.log("User choice is : ", choice);
 
 const computerChoice = generateComputerChoice();
+
+// check for draw 
+
+if(choice === computerChoice)
+{
+   Draw();
+  
+}
+
 }
 
 const generateComputerChoice = () => {
@@ -25,4 +34,9 @@ const generateComputerChoice = () => {
       let randomIndex = Math.floor(Math.random() * 3);
       console.log("computer choice is : ", options[randomIndex]);
       return options[randomIndex];
+}
+
+
+const Draw = () => {
+    console.log("Match was draw");
 }
