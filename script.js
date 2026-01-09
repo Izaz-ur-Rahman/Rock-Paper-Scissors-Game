@@ -1,5 +1,6 @@
 let UserScore = 0;
 let ComputerScore = 0;
+let msgPara = document.querySelector("#msg");
 
 let Choices = document.querySelectorAll(".choice");
 
@@ -72,7 +73,7 @@ const playGame = (UserChoice) => {
       }
 
    }
-      showWinningMsg(Userwin); // calling function here
+      showWinningMsg( Userwin, UserChoice , computerChoice ); // calling function here
    
   }
 
@@ -88,16 +89,33 @@ const generateComputerChoice = () => {
 
 const Draw = () => {
   console.log("Match was draw");
+      msgPara.innerText = "Match was draw";
+      msgPara.style.backgroundColor = "yellow";
+      msgPara.style.color = "black";
+
 };
 
 
-const showWinningMsg = (Userwin) =>{
+const showWinningMsg = (Userwin,UserChoice,computerChoice) =>{
    if(Userwin)
    {
       console.log("You win!");
+      msgPara.innerText = `You win! your ${UserChoice} beat ${computerChoice} `;
+      msgPara.style.backgroundColor = "green";
+      msgPara.style.color = "white";
+
+
    }
    else
    {
       console.log("You lose!");
+      msgPara.innerText = "You lose!";
+            msgPara.innerText = `You lose! ${computerChoice} beat your ${UserChoice} `;
+
+      msgPara.style.backgroundColor = "red";
+      msgPara.style.color = "white";
+
+
+
    }
 }
