@@ -19,7 +19,7 @@ const playGame = (UserChoice) => {
 
   // check for draw
 
-  if (UserChoice=== computerChoice) {
+  if (UserChoice === computerChoice) {
     Draw();
   } 
   else {
@@ -46,11 +46,11 @@ const playGame = (UserChoice) => {
 
         if(computerChoice == "rock" )
         {
-         userwin = true;
+         Userwin = true;
          console.log("player wins")
         }
         else{
-         userwin = false;
+         Userwin = false;
          console.log("computer winner")
         }
       }
@@ -60,18 +60,22 @@ const playGame = (UserChoice) => {
             // scissors vs rock or paper 
             if(computerChoice == "rock")
             {
-               userwin = false;
+               Userwin = false;
                console.log("computer winner ")
             }
             else {
-               userwin = true;
+               Userwin = true;
                console.log("player wins")
             }
          }
 
       }
+
    }
+      showWinningMsg(Userwin); // calling function here
+   
   }
+
 };
 
 const generateComputerChoice = () => {
@@ -85,3 +89,15 @@ const generateComputerChoice = () => {
 const Draw = () => {
   console.log("Match was draw");
 };
+
+
+const showWinningMsg = (Userwin) =>{
+   if(Userwin)
+   {
+      console.log("You win!");
+   }
+   else
+   {
+      console.log("You lose!");
+   }
+}
