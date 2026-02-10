@@ -36,7 +36,7 @@ background-color: rgb(18, 18, 118);
 img{
     height: 150px;
     width: 150px;
-    object-fit: cover;
+    object-fit:cover;
     border-radius: 50%;
 }
 

@@ -1,5 +1,8 @@
 let UserScore = 0;
 let ComputerScore = 0;
+let User_score = document.querySelector("#user-score");
+let Computer_score = document.querySelector("#computer-score");
+
 let msgPara = document.querySelector("#msg");
 
 let Choices = document.querySelectorAll(".choice");
@@ -99,6 +102,10 @@ const Draw = () => {
 const showWinningMsg = (Userwin,UserChoice,computerChoice) =>{
    if(Userwin)
    {
+      UserScore++; // userScore = userScore + 1;
+      User_score.innerText = UserScore;
+      console.log("your user score is : " + UserScore);
+
       console.log("You win!");
       msgPara.innerText = `You win! your ${UserChoice} beat ${computerChoice} `;
       msgPara.style.backgroundColor = "green";
@@ -108,6 +115,9 @@ const showWinningMsg = (Userwin,UserChoice,computerChoice) =>{
    }
    else
    {
+      ComputerScore++;
+      console.log("Computer score is : " + ComputerScore);
+      Computer_score.innerText = ComputerScore;
       console.log("You lose!");
       msgPara.innerText = "You lose!";
             msgPara.innerText = `You lose! ${computerChoice} beat your ${UserChoice} `;
